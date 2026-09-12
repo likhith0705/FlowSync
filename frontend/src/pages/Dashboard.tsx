@@ -10,7 +10,7 @@ import {
   LayoutDashboard,
 } from "lucide-react";
 
-import api from "../api/client";
+import api from "../api/api";
 import { useAuth } from "../context/AuthContext";
 
 
