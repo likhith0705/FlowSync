@@ -1,4 +1,4 @@
-# ⚡ FlowSync
+#  FlowSync
 
 ### Full-Stack Workflow & Task Management System
 
@@ -10,24 +10,41 @@ Built with **React, TypeScript, FastAPI, PostgreSQL, SQLAlchemy, and JWT Authent
 
 ---
 
+## 🚀 Project Live Demo
+
+Experience FlowSync live:
+
+🔗 **[View FlowSync Live Demo](https://flowsync-frontend-ecb8.onrender.com/)**
+
+The live application demonstrates the complete FlowSync workflow and task management system, including:
+
+- 🔐 Secure user authentication
+- 📊 Dashboard and productivity analytics
+- 🔄 Workflow management
+- ✅ Task creation and progress tracking
+- 🔎 Task search and filtering
+- 📈 Real-time workflow completion calculations
+- 📝 Activity tracking
+
+---
+
 ## 🌐 Interactive Architecture
 
 Explore the complete interactive architecture of FlowSync:
 
-### 🔗 [View FlowSync Interactive Architecture](https://likhith0705.github.io/FlowSync/)
+🔗 **[View FlowSync Interactive Architecture](https://likhith0705.github.io/FlowSync/)**
 
 The architecture visualization provides an interactive view of:
 
 - Frontend architecture
 - Authentication and security flow
-- FastAPI API routers
+- FastAPI backend routers
 - Business logic and services
 - SQLAlchemy ORM layer
 - PostgreSQL database structure
-- Deployment architecture
-- Component relationships and data flow
+- Production deployment architecture
 
-Click on architecture nodes to explore their responsibilities, technologies, and source mappings.
+Click on nodes to explore verified implementation details, source file mappings, technologies, and architectural responsibilities.
 
 ---
 
