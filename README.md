@@ -1,42 +1,63 @@
-FlowSync
+# 🚀 FlowSync
 
-A full-stack workflow and task management application that helps users organize workflows, manage tasks, track progress, and monitor productivity.
+> A full-stack workflow and task management application designed to help users organize workflows, manage tasks, track progress, and monitor productivity.
 
-Built with **React, TypeScript, FastAPI, SQLAlchemy, and JWT Authentication**.
+[![Frontend](https://img.shields.io/badge/Frontend-React-blue)](https://react.dev/)
+[![Backend](https://img.shields.io/badge/Backend-FastAPI-009688)](https://fastapi.tiangolo.com/)
+[![Language](https://img.shields.io/badge/Language-TypeScript-blue)]()
+[![Python](https://img.shields.io/badge/Python-3.x-yellow)]()
+[![Database](https://img.shields.io/badge/Database-SQLAlchemy-red)]()
+[![Authentication](https://img.shields.io/badge/Auth-JWT-orange)]()
+
+## 🌐 Live Demo
+
+🚀 **Frontend:** https://flowsync-frontend-ecb8.onrender.com
+
+⚡ **Backend API:** https://flowsync-h20s.onrender.com
+
+📚 **API Documentation:** https://flowsync-h20s.onrender.com/docs
+
 
 ---
 
-Overview
+# 📌 Overview
 
-FlowSync allows users to create and manage workflows and tasks through a modern dashboard.
+FlowSync is a full-stack productivity application that allows users to create workflows, manage tasks, track progress, and monitor productivity through an interactive dashboard.
+
+The application features secure JWT authentication and ensures that each user can only access their own workflows and tasks.
 
 Users can:
 
-- Create and manage workflows
-- Create, edit, and delete tasks
-- Assign task priorities
-- Set task due dates
-- Track task status
-- Monitor workflow progress
-- View dashboard statistics
-- Search and filter tasks
-- Securely register and log in using JWT authentication
+- 📂 Create and manage workflows
+- ✅ Create, update, and delete tasks
+- 🎯 Assign task priorities
+- 📅 Set task due dates
+- 📊 Track workflow progress
+- 📈 Monitor productivity statistics
+- 🔍 Search and filter tasks
+- 🔐 Securely register and log in using JWT authentication
+
 
 ---
 
-Features
+# ✨ Features
 
-1. Authentication
+## 🔐 Authentication
 
 - User registration
-- User login
+- Secure user login
 - JWT-based authentication
 - Protected API routes
+- Token-based session handling
 - User-specific workflows and tasks
 
-2. Dashboard
+---
 
-The dashboard provides an overview of user productivity, including:
+## 📊 Dashboard
+
+The dashboard provides a real-time overview of user productivity.
+
+Users can monitor:
 
 - Total workflows
 - Active workflows
@@ -47,7 +68,9 @@ The dashboard provides an overview of user productivity, including:
 - Overdue tasks
 - Task completion percentage
 
-3. Workflow Management
+---
+
+## 📂 Workflow Management
 
 Users can:
 
@@ -56,39 +79,45 @@ Users can:
 - Update workflow details
 - Change workflow status
 - Track workflow progress
+- Archive workflows
 
-Workflow statuses include:
+### Workflow Statuses
 
-- Active
-- Completed
-- Archived
+- 🟢 Active
+- 🔵 Completed
+- ⚪ Archived
 
-3. Task Management
+---
+
+## ✅ Task Management
 
 Users can:
 
 - Create tasks
 - Edit tasks
 - Delete tasks
+- Assign tasks to workflows
 - Set task priorities
 - Set due dates
 - Update task status
 
-Task statuses:
+### Task Statuses
 
-- To Do
-- In Progress
-- Completed
+- 📋 To Do
+- 🔄 In Progress
+- ✅ Completed
 
-Task priorities:
+### Task Priorities
 
-- Low
-- Medium
-- High
+- 🟢 Low
+- 🟡 Medium
+- 🔴 High
 
-4. Search and Filtering
+---
 
-Tasks can be searched and filtered by:
+## 🔍 Search and Filtering
+
+Tasks can be searched and filtered using:
 
 - Task name
 - Task description
@@ -97,9 +126,24 @@ Tasks can be searched and filtered by:
 
 ---
 
+## 📈 Productivity Tracking
+
+FlowSync automatically calculates workflow and task statistics to help users monitor their productivity.
+
+This includes:
+
+- Completed tasks
+- Pending tasks
+- Overdue tasks
+- Workflow progress
+- Task completion percentage
+
+
+---
+
 # 🛠️ Tech Stack
 
-## Frontend
+## 🎨 Frontend
 
 - React
 - TypeScript
@@ -109,7 +153,7 @@ Tasks can be searched and filtered by:
 - Tailwind CSS
 - Lucide React
 
-## Backend
+## ⚙️ Backend
 
 - Python
 - FastAPI
@@ -117,43 +161,44 @@ Tasks can be searched and filtered by:
 - Pydantic
 - JWT Authentication
 
+## 🗄️ Database
+
+- SQLAlchemy ORM
+- PostgreSQL / Neon PostgreSQL
+
+## ☁️ Deployment
+
+- Frontend: Render Static Site
+- Backend: Render Web Service
+- Database: Neon PostgreSQL
+
+
 ---
 
-# 📂 Project Structure
+# 🏗️ Application Architecture
 
 ```text
-FlowSync
-│
-├── backend
-│   ├── app
-│   │   ├── routers
-│   │   │   ├── activities.py
-│   │   │   ├── auth.py
-│   │   │   ├── dashboard.py
-│   │   │   ├── tasks.py
-│   │   │   └── workflows.py
-│   │   │
-│   │   ├── services
-│   │   │   └── activity.py
-│   │   │
-│   │   ├── database.py
-│   │   ├── main.py
-│   │   ├── models.py
-│   │   ├── schemas.py
-│   │   └── security.py
-│   │
-│   └── requirements.txt
-│
-├── frontend
-│   ├── src
-│   │   ├── api
-│   │   ├── context
-│   │   ├── pages
-│   │   ├── types
-│   │   ├── App.tsx
-│   │   └── main.tsx
-│   │
-│   ├── package.json
-│   └── vite.config.ts
-│
-└── README.md
+                    ┌─────────────────────┐
+                    │      React App      │
+                    │   TypeScript + Vite │
+                    └──────────┬──────────┘
+                               │
+                               │ HTTP Requests
+                               │ JWT Authentication
+                               ▼
+                    ┌─────────────────────┐
+                    │     FastAPI API     │
+                    │                     │
+                    │  Authentication     │
+                    │  Workflows          │
+                    │  Tasks              │
+                    │  Dashboard          │
+                    │  Activities         │
+                    └──────────┬──────────┘
+                               │
+                               │ SQLAlchemy ORM
+                               ▼
+                    ┌─────────────────────┐
+                    │   PostgreSQL DB     │
+                    │   Neon PostgreSQL   │
+                    └─────────────────────┘
